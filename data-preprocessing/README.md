@@ -6,7 +6,18 @@ This project demonstrates how to prepare a dataset for machine learning by handl
 
 ## Project Structure
 
-data_preprocessing.ipynb
+data-preprocessing/
+│  
+├── data/                      # Preprocessed dataset
+│   └── raw/
+|   |    └── Titanic-Dataset.ipynb
+|   |    └── titanic_processed.csv
+|   └── notebooks/                  # Main notebook 
+|           └── data_preprocessing.ipynb
+|
+├── requirements.txt
+└── README.md
+
 
 ## Objectives
 
@@ -41,6 +52,7 @@ data_preprocessing.ipynb
 ```bash
 pip install -r requirements.txt
 ```
+---
 
 ## Insights
 - Missing values handled by median imputation for `Age` and mode for `Embarked`.
