@@ -47,3 +47,9 @@ pip install -r requirements.txt
 
 ## Insights
 
+- The Logistic Regression model successfully classified passenger survival with strong accuracy 80%.
+- Gender (Sex) and Passenger Class (Pclass) were the most significant predictors (and coeffiecients of the model).
+- Fare showed positive relationship with survival.
+- FamilySize had a moderate and negative influence on survival but being alone had a mild and negative influence as well.
+- Age and Embarked had weaker effects, though younger passengers had higher survival rate.
+- The model’s F1-score confirmed a good trade-off between precision and recall, suggesting balanced predictive performance.
