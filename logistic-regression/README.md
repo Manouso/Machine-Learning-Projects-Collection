@@ -1,6 +1,7 @@
 # Logistic Regression - Titanic Dataset
 
-This project demonstrates how to use preprocessed data from the project data-preprocessing to predict target values by implementing logistic regression on the data.
+This project demonstrates how to use preprocessed data from the project data-preprocessing to predict target values by implementing logistic regression on the data and
+applying hyperparameter-tuning and cross-validation to improve model performance.
 
 ---
 
@@ -8,16 +9,16 @@ This project demonstrates how to use preprocessed data from the project data-pre
 
 logistic-regression/
 │
-├── logistic_regression.ipynb   # Main notebook
+├── logistic_regression.ipynb # Main notebook
 ├── requirements.txt
 └── README.md
-
 
 ---
 
 ## Objectives
 
 - Use logistic regression to classify passenger survival outcomes.
+- Use cross-validation and hyperparameter tuning to improve model performance.
 - Evaluate performance using Accuracy, Precision, Recall, and F1-score.
 - Interpret feature importance to understand which factors most influenced survival.
 
@@ -53,3 +54,5 @@ pip install -r requirements.txt
 - FamilySize had a moderate and negative influence on survival but being alone had a mild and negative influence as well.
 - Age and Embarked had weaker effects, though younger passengers had higher survival rate.
 - The model’s F1-score confirmed a good trade-off between precision and recall, suggesting balanced predictive performance.
+- Random Search has better accuracy than GridSearch in our example (RandomSearch:80% vs GridSearch:79%).
+- Random Search finishes way faster than GridSearch (RandomSearch: 0.26s vs GridSearch: 2.82s).
