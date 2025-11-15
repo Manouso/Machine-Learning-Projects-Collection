@@ -49,10 +49,10 @@ pip install -r requirements.txt
 ## Insights
 
 - The Logistic Regression model successfully classified passenger survival with strong accuracy 80%.
-- Gender (Sex) and Passenger Class (Pclass) were the most significant predictors (and coeffiecients of the model).
+- Gender (Sex) and Passenger Class (Pclass) were the most significant predictors.
 - Fare showed positive relationship with survival.
 - FamilySize had a moderate and negative influence on survival but being alone had a mild and negative influence as well.
 - Age and Embarked had weaker effects, though younger passengers had higher survival rate.
 - The model’s F1-score confirmed a good trade-off between precision and recall, suggesting balanced predictive performance.
-- Random Search has better accuracy than GridSearch in our example (RandomSearch:80% vs GridSearch:79%).
-- Random Search finishes way faster than GridSearch (RandomSearch: 0.26s vs GridSearch: 2.82s).
+- Random Search has better accuracy than GridSearch (RandomSearch:80% vs GridSearch:79%).
+- Grid Search finishes slightly faster than RandomSearch (RandomSearch: 0.26s vs GridSearch: 0.19s).

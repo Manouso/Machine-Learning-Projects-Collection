@@ -18,7 +18,8 @@ and compares this model with logistic regression to find which one performs the 
  
 - Use decision trees to classify passenger survival outcomes.
 - Understand the concept of splitting criteria (Gini)
-- Compare accuracy with logistic regression
+- Compare accuracy and f1-score with logistic regression
+- Interpret feature importance to understand which factors most influenced survival.
 
 --- 
 
@@ -45,3 +46,10 @@ pip install -r requirements.txt
 ---
 
 ## Insights 
+
+- The Decision Tree Classifier successfully classified passenger survival rate with strong accuracy 79%
+- The features Sex and Pclass (passenger class) were by far the most most significant predictors.
+- The Decision Tree Classifier nullified the significance of some features (Fare,Embarked,IsAlone) in contrast with Logistic Regression.
+- The model’s F1-score confirmed a good trade-off between precision and recall, suggesting balanced predictive performance.
+- The accuracy of Decision Tree Classifier (79%) is slightly worse than the accuracy of Logistic Regression (80%).
+- Decision Tree Classifier finishes slightly faster than logistic regression (Decision Tree Classifier: 0.23s vs Logistic Regression: 0.26s)
