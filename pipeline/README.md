@@ -1,14 +1,17 @@
 # Pipeline Implementation Project
 
-This Project demonstrates how to build pipelines for Machine Learning practices and evaluates them to see why pipelines are
-useful and how much do they benefit the programmer and the user.
+This project demonstrates how to build, evaluate, and compare **scikit-learn Pipelines** for a Logistic Regression model using the Titanic dataset.  
+It highlights why pipelines are essential in real machine learning workflows, focusing on clean structure, preventing data leakage, and simplifying experimentation.
 
 ---
 
 ## Project Structure
 
 - **pipeline/**
-  - `pipeline_logistic_regression.ipynb` — Main notebook for experiments  
+  - `notebooks`
+    - `pipeline_logistic_regression.ipynb` — Main notebook for experiments
+  - `data`
+      `Titanic-Dataset.csv`  — The dataset
   - `requirements.txt` — Requirements  
   - `README.md` — Project overview
 
@@ -17,9 +20,18 @@ useful and how much do they benefit the programmer and the user.
 ## Objectives
 
 - Understand why pipelines are useful
-- Build pipeline to do Logistic Regression and Scaling (Standard Scaler)
-- Evaluate and compare pipeline against my previous project without pipeline.
-
+- Build pipeline that includes:
+  - Feature Engineering
+  - Eliminate Features
+  - Numeric Preprocessing
+  - Categorical Preprocessing
+  - Logistic Regression Classifier
+- Perform **Hyperparameter Tuning** within the pipeline RandomSearchCV
+- Evaluate and compare:
+  - Accuracy with vs. without pipeline
+  - Execution time
+  - Feature Importance  
+  
 ---
 
 ## Dataset
@@ -37,6 +49,29 @@ useful and how much do they benefit the programmer and the user.
 
 ---
 
+## Pipeline Components
+
+The pipeline performs the following steps:
+
+### **1. Feature Engineering**
+- Add `FamilySize`  
+- Add `IsAlone`
+- Remove `PassengerId`, `Name`, `Ticket`, `Cabin`,`SibSp`, `Parch`
+
+### **2. Column Preprocessing**
+- **Numeric pipeline**  
+  - Fill missing values using median  
+  - StandardScaler  
+- **Categorical pipeline**  
+  - Fill missing values using most frequent  
+  - OneHotEncoder  
+
+### **3. Model**
+- Logistic Regression  
+- Hyperparameter tuning (`C`, solver, etc.)
+
+---
+
 ## Requirements
 
 ```bash
@@ -46,3 +81,8 @@ pip install -r requirements.txt
 
 ## Insights
 
+- Pipelines ensure all preprocessing and feature engineering steps are applied consistently, avoiding data leakage during cross-validation.
+- Accuracy was a slightly lower compared to manual implementation (79.9% vs 80.04%), but that accuracy may be more represantative.
+- Training time of the new implementation was higher (0.95 sec vs 0.26sec) and that can be explained as 
+  Pipelines may take longer to fit due to preprocessing being applied in each fold of cross-validation.
+- Overall, pipelines make the coding easier and most important of all it prevents data leakage and errors in preprocessing.
