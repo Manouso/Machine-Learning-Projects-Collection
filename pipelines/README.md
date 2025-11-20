@@ -85,15 +85,29 @@ The Ames dataset contains **79 features** with many missing values and categoric
 - Generates a high-dimensional sparse matrix → pipelines handle it automatically  
 - Highlights the power of **ColumnTransformer**
 
-## EDA
+### 1. Feature Engineering
+- Engineered new features (`rooms_per_household`, `bedrooms_per_room`, `population_per_household`)
+- Remove noisy or irrelevant features (`total_rooms`,`total_bedrooms`,`population`,`households`)
 
-## Pipeline Components
+### 2. Numeric Preprocessing
+- Fill missing numeric values (median)
+- Apply standard scaling
 
+### 3. Categorical Preprocessing
+- Fill missing categorical values (most frequent)
+- One-Hot Encode all categories
+
+### 4. Model
+- Decision Tree Regressor
+- Hyperparameter tuning using `RandomizedSearchCV`
 
 ## Key Insights
-
-
-
+- Pipelines avoid catastrophic mistakes like fitting imputation or encoding on the full dataset.
+- They make it possible to handle 79 features with dozens of transformations safely.
+- Decision Tree Regressor performed decently with R score = 0.736 
+- Feature importances become reliable after preprocessing.
+- RandomizedSearchCV may be slower, but provides a significantly better model.
+- The final pipeline can be saved and deployed as one single object
 ---
 
 ## Requirements
