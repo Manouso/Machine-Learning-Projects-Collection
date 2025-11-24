@@ -6,17 +6,12 @@ This project demonstrates how to prepare a dataset for machine learning by handl
 
 ## Project Structure
 
-data-preprocessing/
-│  
-├── data/                      # Preprocessed dataset
-│   └── raw/
-|   |    └── Titanic-Dataset.ipynb
-|   |    └── titanic_processed.csv
-|   └── notebooks/                  # Main notebook 
-|           └── data_preprocessing.ipynb
-|
-├── requirements.txt
-└── README.md
+- **data-preprocessing/**
+  - `data_preprocessing.ipynb` — Main notebook for experiments  
+  - `requirements.txt` — Requirements  
+  - `README.md` — Project overview
+
+---
 
 
 ## Objectives

@@ -15,12 +15,9 @@ Pipelines are essential in modern ML workflows because they:
 ## Project Structure
 
 - **pipeline/**
-  - `notebooks`
-    - `pipeline_logistic_regression.ipynb` — notebook for titanic dataset
-    - `pipeline_logistic_regression.ipynb` — notebook for housing dataset
-  - `data`
-      - `Titanic-Dataset.csv`
-      - `Housing-Dataset,csv` 
+  
+  - `pipeline_logistic_regression.ipynb` — notebook for titanic dataset
+  - `pipeline_logistic_regression.ipynb` — notebook for housing dataset
   - `requirements.txt` — Requirements  
   - `README.md` — Project overview
 

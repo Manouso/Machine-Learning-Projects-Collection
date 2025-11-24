@@ -7,7 +7,12 @@ to understand and compare how different marketing channels influence Sales
 
 ## Project Structure
 
-eda_project.ipynb
+- **data-eda/**
+  - `eda_project.ipynb` — Main notebook for experiments  
+  - `requirements.txt` — Requirements  
+  - `README.md` — Project overview
+
+---
 
 ## Objectives
 
