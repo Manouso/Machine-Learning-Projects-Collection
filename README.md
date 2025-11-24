@@ -55,15 +55,29 @@ A collection of data science and machine learning mini projects built to strengt
 - Evaluated model performance using RMSE and visualized feature importances.
 - Dataset: [Ames Housing Dataset (CSV)](https://www.kaggle.com/datasets/shashanknecrothapa/ames-housing-dataset)
 
-### 8. Random Forest Tree Classifier with Pipelines on Heart Disease Data
+### 8. Random Forest Classifier with Pipelines on Heart Disease Data
 - Built a Random Forest Tree Classifier pipeline for the **Heart Failure Prediction Dataset**. 
 - One-hot encoded categorical variables and scaled numeric features using StandardScaler.
 - Performed hyperparameter tuning and used Stratified Cross Validation.
 - Performed Feature Engineering by dropping non-important features of the dataset.
 - Dataset: [Heart Failure Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)
----
 
-### 9. 
+### 9. Gradient Boosting Classifier with Pipelines on Heart Disease Data
+- Built a Gradient Boosting Classifier pipeline for the **Heart Failure Prediction Dataset**. 
+- Used Explanatory Data Analysis of the Heart Disease Data from the **Random Forest Classifier** project.
+- Performed hyperparameter tuning and used Stratified Cross Validation.
+- Evaluate feature importance prior to feature engineering to receive necessary insight.
+- Performed Feature Engineering by dropping non-important features of the dataset using a threshold of importance.
+- Dataset: [Heart Failure Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)
+
+### 10. Extreme Gradient Boosting Classifier with Pipelines on Heart Disease Data
+- Built an Extreme Gradient Boosting Classifier pipeline for the **Heart Failure Prediction Dataset**. 
+- Used Explanatory Data Analysis of the Heart Disease Data from the **Random Forest Classifier** project.
+- Performed hyperparameter tuning and used Stratified Cross Validation.
+- Evaluate feature importance prior to feature engineering to receive necessary insight.
+- Performed Feature Engineering by dropping non-important features of the dataset using a threshold of importance.
+- Dataset: [Heart Failure Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)
+---
 
 ## Tools & Libraries
 - Python
