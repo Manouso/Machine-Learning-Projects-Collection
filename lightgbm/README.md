@@ -54,15 +54,14 @@ The notebook implements an 11-step ML workflow:
 ---
 
 ## Performance Results
-
- Metric  Baseline  Optimized  Improvement  Improvement %
- Accuracy    0.8424     0.8859       0.0435           5.16
-Precision    0.8842     0.9091       0.0249           2.81
-   Recall    0.8235     0.8824       0.0588           7.14
- F1-Score    0.8528     0.8955       0.0427           5.01
-  ROC-AUC    0.9067     0.9291       0.0224           2.47
-      MCC    0.6857     0.7703       0.0846          12.34
       
+    Metric  Baseline  Optimized  Improvement  Improvement %
+ Accuracy  0.842391   0.891304     0.048913           5.81
+Precision  0.884211   0.901961     0.017750           2.01
+   Recall  0.823529   0.901961     0.078431           9.52
+ F1-Score  0.852792   0.901961     0.049169           5.77
+  ROC-AUC  0.906743   0.929579     0.022836           2.52
+      MCC  0.685663   0.780010     0.094346          13.76
 
 **Top Predictive Features:**
 1. ST_Slope (slope pattern)
@@ -87,8 +86,7 @@ Precision    0.8842     0.9091       0.0249           2.81
 ## Key Highlights
 
  **Complete Pipeline** - From raw data to deployment-ready model  
- **Optimized Performance** - 95% ROC-AUC through systematic tuning  
- **Production-Ready** - Model persistence with metadata tracking  
+ **Optimized Performance** - 93% ROC-AUC through systematic tuning    
  **Interpretable** - Feature importance and confidence analysis  
  **Best Practices** - Stratified sampling, CV, baseline comparison  
 
