@@ -28,6 +28,8 @@ A collection of data science and machine learning mini projects built to strengt
 - Used cross-validation to improve model's training.
 - Applied Hyperparameter tuning to find the best hyperparameters to improve model's performance.
 - Visualized the importance of model's features and ordered based on their coefficients.
+- Implemented Learning and Validation Curves to gain insight about model's performance.
+- Visualized Error Analysis of features to see how much do they affect the model negatively. 
 - Dataset: Kaggle Titanic dataset.
 
 ### 5. Decision Trees on Pre-Processed Titanic Data
