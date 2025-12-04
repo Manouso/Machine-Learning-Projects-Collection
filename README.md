@@ -90,12 +90,21 @@ A collection of data science and machine learning mini projects built to strengt
 - Dataset: [Heart Failure Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)
 
 ## 12. Model Stacking with Pipelines on Heart Disease Data
-- Built a Model Stacking pipeline for basic and meta models **Heart Failure Prediction Dataset**.
+- Built a Model Stacking pipeline for basic and meta models.
 - Built advanced EDA to capture the characteristics of  **Heart Failure Prediction Dataset**.
 - Performed Hyperparameter Tuning and used Stratified Cross Validation.
 - Evaluate feature importance prior to feature engineering to receive necessary insight.
 - Performed Feature Engineering by engineering new features in limited number however due to overfitting issues.
 - Dataset: [Heart Failure Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)
+
+## 13. Model Voting with Pipelines on Fraud Detection Data
+- Built a Model Voting pipeline which combines the strengths of 3 ML models.
+- Built advanced EDA to capture the characteristics of **Credit Card Fraud Detection Dataset**.
+- Performed more advanced Hyperparameter Tuning by combining Random Search with Bayesian Optimization.
+- Evaluate feature importance prior to feature engineering to receive necessary insight.
+- Make an Error Analysis to gain insight about the mistakes and the blind spots of the model.
+- Performed Feature Engineering by engineering new features to match the complexity of the new problem.
+- Dataset: [Credit Card Fraud Detection Dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
 
 ---
 
