@@ -106,6 +106,15 @@ A collection of data science and machine learning mini projects built to strengt
 - Performed Feature Engineering by engineering new features to match the complexity of the new problem.
 - Dataset: [Credit Card Fraud Detection Dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
 
+## 14. FastAPI Credit Card Fraud Prediction Service
+- Built a production-ready REST API using FastAPI to serve real-time predictions from an ensemble voting classifier.
+- Implemented proper input validation using Pydantic models for the 30 credit card transaction features (Time, Amount, V1-V28).
+- Integrated model loading and prediction logic with error handling for missing model files and prediction failures.
+- Created comprehensive API documentation with interactive Swagger UI for easy testing and integration.
+- Handled pickle deserialization issues by properly importing feature engineering functions used during model training.
+- Implemented response formatting with both binary predictions and probability scores for fraud detection confidence.
+- Dataset: [Credit Card Fraud Detection Dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+
 ---
 
 ## Tools & Libraries
