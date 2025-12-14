@@ -208,6 +208,7 @@ __marimo__/
 
 # Datasets
 # Exclude all dataset files and directories
+data/
 datasets/
 *.csv
 *.tsv
