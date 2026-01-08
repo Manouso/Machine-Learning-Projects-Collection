@@ -34,35 +34,45 @@ pip install -r requirements.txt
 
 ## Model Architecture
 
-- Conv2D (3 -> filters1, 3x3, padding=1)
-- BatchNorm2D
-- ReLU
-- MaxPool2D (2x2)
-- Conv2D (filters1 -> filters2, 3x3, padding=1)
-- BatchNorm2D
-- ReLU
-- MaxPool2D (2x2)
-- Flatten
-- Linear (filters2*8*8 -> 10)
-- Dropout
+The CNN consists of 4 convolutional blocks followed by fully connected layers:
 
-Where filters1 and filters2 are configurable (default 32, 64).
+**Convolutional Blocks**:
+- Conv2D (3 → 32, 3x3, padding=1) + BatchNorm2D + ReLU + MaxPool2D (2x2) → 16x16x32
+- Conv2D (32 → 64, 3x3, padding=1) + BatchNorm2D + ReLU + MaxPool2D (2x2) → 8x8x64
+- Conv2D (64 → 128, 3x3, padding=1) + BatchNorm2D + ReLU + MaxPool2D (2x2) → 4x4x128
+- Conv2D (128 → 256, 3x3, padding=1) + BatchNorm2D + ReLU + MaxPool2D (2x2) → 2x2x256
+
+**Fully Connected Layers**:
+- Flatten → 1024 features
+- Linear (1024 → 512) + ReLU + Dropout
+- Linear (512 → 10 classes)
+
+Default filter sizes: 32, 64, 128, 256 (configurable in CustomCNN class).
 
 ## Hyperparameters
 
 Tuned via 5-fold cross-validation grid search:
 
-- Learning rate: [0.0001, 0.001, 0.01]
-- Batch size: [64, 128, 256]
-- Dropout rate: [0.3, 0.4, 0.5]
-- Weight decay: [0, 1e-4, 1e-3]
+- Learning rate: [0.0001, 0.0005, 0.001, 0.005]
+- Batch size: [32, 64]
+- Dropout rate: [0.2, 0.3, 0.4]
+- Weight decay: [0, 1e-5, 1e-4]
 - Optimizer: Adam
+- Total combinations: 72 (4 × 2 × 3 × 3)
 
 Training uses LR scheduler (StepLR), early stopping, mixed precision for GPU optimization, and label smoothing.
 
-## Estimated Performance
+## Actual Performance
 
-With cross-validation tuning, LR scheduling, and optimizations, expect 75-85% test accuracy after 20-30 epochs.
+**Test Accuracy**: 85.77%
+
+**Best Model Hyperparameters**: 
+- Learning Rate: 0.001
+- Batch Size: 32
+- Dropout Rate: 0.2
+- Weight Decay: 0
+
+**Total Runtime**: ~17 hours
 
 ## Notes
 
