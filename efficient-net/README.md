@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 Run the Jupyter notebook `efficient_net.ipynb` to:
 
-1. Perform hyperparameter tuning with random search (8 trials) on classifier head
+1. Perform hyperparameter tuning with random search (20 trials) on classifier head
 2. Train the best model configuration on CIFAR-10 with frozen backbone
 3. Optionally fine-tune the backbone with reduced learning rate
 4. Evaluate comprehensive performance on train/validation/test sets
@@ -32,11 +32,11 @@ Run the Jupyter notebook `efficient_net.ipynb` to:
 
 ## Hyperparameters Tuned
 
-- **Learning Rate**: [0.01, 0.005, 0.001, 0.0005, 0.0001, 5e-5]
-- **Weight Decay**: [0, 1e-5, 1e-4, 5e-4, 1e-3, 5e-3]
-- **Dropout Rate**: [0.0, 0.1, 0.2, 0.3, 0.4]
-- **Optimizer**: ['adam', 'adamw', 'sgd']
-- **Scheduler**: ['cosine', 'step', 'exponential', 'none']
+- **Learning Rate**: [0.01, 0.005, 0.001, 0.0005]
+- **Weight Decay**: [0, 1e-4, 5e-4, 1e-2, 5e-2]
+- **Dropout Rate**: [0.1, 0.2, 0.3, 0.4, 0.5]
+- **Optimizer**: ['adamw', 'sgd']
+- **Scheduler**: ['cosine', 'step', 'exponential']
 - **Classifier Type**: ['simple', 'deep']
 
 ### Data Augmentation
@@ -48,7 +48,7 @@ Run the Jupyter notebook `efficient_net.ipynb` to:
 - RandomErasing (Cutout technique)
 
 ### Optimization Strategies
-- **Optimizers**: Adam, AdamW, SGD with momentum
+- **Optimizers**: AdamW, SGD with momentum
 - **Schedulers**: Cosine annealing, step decay, exponential decay
 - **Regularization**: Weight decay, dropout, batch normalization
 
@@ -67,9 +67,10 @@ The notebook provides comprehensive analysis including:
 
 This EfficientNet-B1 implementation achieves superior performance compared to other transfer learning methods on CIFAR-10:
 
-- **EfficientNet-B1 (this project)**: ~70-85% expected accuracy (with proper hyperparameter tuning and fine-tuning)
-- **ResNet18 (transfer-learning project)**: 95.76% test accuracy (but likely overfitting or data leakage, as CIFAR-10 baseline is ~58%)
-- **Typical ResNet18 on CIFAR-10**: ~58-65% with transfer learning
+- **EfficientNet-B1 on CIFAR-10 can reach**: close to 98%
+- **EfficientNet-B1**: 97.13% test accuracy is close to the ideal possible acccuracy
+- **ResNet18 (transfer-learning project)**: 95.76% test accuracy is quite reasonable and even better than the estimation
+- **ResNet18 on CIFAR-10 can reach**: close to 95%
 
 The EfficientNet-B1 model benefits from its compound scaling and optimized architecture, providing better feature extraction than ResNet18 for image classification tasks.
 
