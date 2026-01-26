@@ -128,6 +128,46 @@ A collection of data science and machine learning mini projects built to strengt
 - Used mini-batch training with PyTorch DataLoader and evaluated with accuracy/classification metrics.
 - Dataset: Kaggle Titanic dataset with engineered features (FamilySize, Title, AgeBin, FareBin).
 
+### 17. Multi-Layer Perceptron on MNIST Dataset
+- Implemented an MLP using PyTorch for MNIST digit classification with hyperparameter tuning.
+- Included configurable hidden layers, dropout, and batch normalization.
+- Used RandomizedSearchCV with Stratified K-Fold cross-validation for tuning.
+- Trained with validation monitoring, loss/accuracy curves, and learning rate scheduling.
+- Evaluated with accuracy, precision, recall, F1-score, confusion matrix, and sample predictions.
+- Dataset: MNIST (70,000 28x28 grayscale images of digits 0-9).
+
+### 18. Convolutional Neural Network on MNIST Dataset
+- Built a modern CNN using PyTorch for handwritten digit recognition on MNIST.
+- Incorporated batch normalization, dropout, and data augmentation (random rotation and translation).
+- Utilized mixed precision training (FP16) for faster training on GPUs.
+- Performed hyperparameter tuning with random search and early stopping to prevent overfitting.
+- Evaluated with comprehensive metrics including classification reports and confusion matrices.
+- Dataset: MNIST (70,000 28x28 grayscale images of digits 0-9).
+
+### 19. CNN from Scratch on CIFAR-10 Dataset
+- Implemented a Convolutional Neural Network from scratch using PyTorch for CIFAR-10 image classification.
+- Included data preprocessing with normalization and augmentation (random crop, horizontal flip, random erasing, Gaussian noise).
+- Performed hyperparameter tuning for learning rate, batch size, dropout, and weight decay.
+- Used Adam optimizer with GPU support and evaluated with confusion matrix and classification report.
+- Dataset: CIFAR-10 (60,000 32x32 color images in 10 classes).
+
+### 20. Transfer Learning with ResNet18 on CIFAR-10
+- Demonstrated transfer learning using pretrained ResNet18 on CIFAR-10 with progressive unfreezing.
+- Applied extensive data augmentation (random cropping, flipping, rotation, color jittering, affine transformations, perspective distortion, random erasing).
+- Replaced the classifier head with a custom multi-layer network including dropout and batch normalization.
+- Implemented progressive unfreezing: trained classifier first, then unfroze later layers for fine-tuning.
+- Performed hyperparameter optimization with random search over learning rates, batch sizes, and unfreezing strategies.
+- Achieved best validation accuracy of 58.56% with detailed evaluation metrics.
+- Dataset: CIFAR-10 (60,000 32x32 color images in 10 classes).
+
+### 21. EfficientNet-B1 Transfer Learning on CIFAR-10
+- Implemented EfficientNet-B1 with a hyperparameter-tuned classifier head for CIFAR-10 classification.
+- Froze the pretrained backbone initially, training only the classifier, then optionally fine-tuned the backbone.
+- Used advanced data augmentation techniques (random crop, flip, rotation, color jitter, affine transformations, random erasing).
+- Performed random search over learning rates, weight decay, dropout, optimizers, and schedulers.
+- Evaluated on train/validation/test splits with detailed metrics and visualizations.
+- Dataset: CIFAR-10 (60,000 32x32 color images in 10 classes).
+
 ---
 
 ## Tools & Libraries
