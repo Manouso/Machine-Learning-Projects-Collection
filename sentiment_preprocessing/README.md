@@ -1,6 +1,6 @@
-# Classical Text Representation for IMDB Sentiment Analysis
+# IMDB Sentiment Text Preprocessing
 
-This project demonstrates classical text representation techniques for sentiment analysis on the IMDB movie reviews dataset. It includes text preprocessing, n-gram generation, vocabulary building with special tokens, and conversion to numerical sequences for models (classical or neural).
+This project demonstrates text preprocessing techniques for sentiment analysis on the IMDB movie reviews dataset. It includes text cleaning, n-gram generation, vocabulary building with special tokens, and conversion to numerical sequences for models (classical or neural).
 
 ## Features
 
@@ -21,7 +21,7 @@ This project demonstrates classical text representation techniques for sentiment
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd classical-text-representation
+   cd sentiment_preprocessing
    ```
 
 2. Install dependencies:
@@ -32,7 +32,7 @@ This project demonstrates classical text representation techniques for sentiment
 ## Usage
 
 1. Place `IMDB Dataset.csv` in the project directory.
-2. Open `classical_text_representation.ipynb` in Jupyter Notebook.
+2. Open `imdb_text_preprocessing.ipynb` in Jupyter Notebook.
 3. Run cells sequentially:
    - Load and preprocess data.
    - Generate n-grams.
@@ -55,7 +55,7 @@ This project demonstrates classical text representation techniques for sentiment
 ## Project Structure
 
 ```
-classical-text-representation/
+sentiment_preprocessing/
 ├── classical_text_representation.ipynb  # Main notebook
 ├── IMDB Dataset.csv                     # Dataset (user-provided)
 ├── requirements.txt                     # Python dependencies
