@@ -2,3 +2,5 @@ scikit-learn
 pandas
 numpy
 spacy
+nltk
+scikit-learn
