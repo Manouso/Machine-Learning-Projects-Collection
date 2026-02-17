@@ -4,3 +4,4 @@ numpy
 spacy
 nltk
 gensim
+torch
