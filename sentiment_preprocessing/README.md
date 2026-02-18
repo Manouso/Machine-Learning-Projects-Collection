@@ -88,14 +88,13 @@ This project demonstrates text preprocessing techniques for sentiment analysis o
 - **BoW + Logistic Regression**: Accuracy 86%, Precision 87%/85%, Recall 85%/87%.
 
 ### Neural Model (Test Set Performance, After Tuning)
-- **Accuracy**: 89.47%
-- **Precision**: 87.71%
-- **Recall**: 91.8%
-- **F1-Score**: ~89.7% (estimated)
+- **Accuracy**: 89.00%
+- **Precision**: 90.11%
+- **Recall**: 87.6%
 
 ### Comparison
 - **Strengths of Classical**: Simpler, faster training, strong baselines (83-86% accuracy) with BoW/TF-IDF capturing word frequencies effectively. Logistic Regression and Naive Bayes are robust for text classification without needing large data.
-- **Strengths of Neural**: Better at capturing context and semantics with embeddings and layers. The tuned model (unfrozen embeddings, extra FC layers) outperforms classical methods (89.47% vs. 86%), demonstrating neural's potential with proper optimization.
+- **Strengths of Neural**: Better at capturing context and semantics with embeddings and layers. The tuned model (unfrozen embeddings, extra FC layers) outperforms classical methods (89.00% vs. 86%), demonstrating neural's potential with proper optimization.
 - **Overall**: Classical methods provide excellent baselines with minimal setup; neural excels with tuning and offers better scalability for complex tasks. The neural approach achieved superior performance on this dataset.
 
 ## Dependencies
