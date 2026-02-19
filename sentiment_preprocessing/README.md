@@ -87,15 +87,21 @@ This project demonstrates text preprocessing techniques for sentiment analysis o
 - **BoW + Naive Bayes**: Accuracy 83%, Precision 84%/82%, Recall 81%/84%.
 - **BoW + Logistic Regression**: Accuracy 86%, Precision 87%/85%, Recall 85%/87%.
 
-### Neural Model (Test Set Performance, After Tuning)
-- **Accuracy**: 89.00%
-- **Precision**: 90.11%
-- **Recall**: 87.6%
+### Neural Models (Test Set Performance, After Tuning)
+- **SemanticClassifier (Feedforward with Pooling)**: Accuracy 89.06%, Precision 89.00%, Recall 89.14%, F1 89.07%
+- **SemanticClassifierGRU (Bidirectional GRU)**: Accuracy 88.91%, Precision 87.55%, Recall 90.72%, F1 89.11%
+- **SemanticClassifierLSTM (Bidirectional LSTM)**: Accuracy 87.99%, Precision 88.06%, Recall 87.90%, F1 87.98%
 
 ### Comparison
 - **Strengths of Classical**: Simpler, faster training, strong baselines (83-86% accuracy) with BoW/TF-IDF capturing word frequencies effectively. Logistic Regression and Naive Bayes are robust for text classification without needing large data.
-- **Strengths of Neural**: Better at capturing context and semantics with embeddings and layers. The tuned model (unfrozen embeddings, extra FC layers) outperforms classical methods (89.00% vs. 86%), demonstrating neural's potential with proper optimization.
+- **Strengths of Neural**: Better at capturing context and semantics with embeddings and layers. The tuned models outperform classical methods (87-89% vs. 86%), with GRU showing balanced performance. Feedforward with pooling is efficient, while the embedding neural network exceled at both accuracy and speed.
 - **Overall**: Classical methods provide excellent baselines with minimal setup; neural excels with tuning and offers better scalability for complex tasks. The neural approach achieved superior performance on this dataset.
+## Future Improvements
+- **Advanced Models**: Integrate transformer-based models like BERT or DistilBERT for potential 90%+ accuracy, leveraging pre-trained contextual embeddings.
+- **Data Augmentation**: Apply synonym replacement, back-translation, or noise injection to increase dataset diversity and reduce overfitting.
+
+- **Ensemble Methods**: Combine predictions from multiple models (e.g., feedforward + RNN) for improved robustness.
+- **Sequence Length Handling**: Truncate or use attention mechanisms for very long reviews to manage memory and focus on key parts.
 
 ## Dependencies
 
